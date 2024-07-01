@@ -14,6 +14,3 @@ async def create_audiobook(text: str, filename: str = "audiobook.mp3"):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     
-@router.get('/')
-async def hello():
-    return "hello User"
