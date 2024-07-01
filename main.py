@@ -15,6 +15,9 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+@app.get('/')
+async def hello():
+    return "hello User"
 
 from app.api.tts import router as TTS_router
 app.include_router(TTS_router, prefix='/api/tts')
